@@ -20,11 +20,6 @@
 
 import libxml2
 import sys
-try:
-    from cStringIO import StringIO
-except ImportError:
-    from StringIO import StringIO
-
 
 class ClustatParser(object):
 
