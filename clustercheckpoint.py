@@ -17,11 +17,16 @@
 # You should have received a copy of the GNU Lesser General Public
 # License along with this library; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301 USA
-
+'''
+This module provides interaces for wortking with clustat.
+'''
 import libxml2
 import sys
 
 class ClustatParser(object):
+    '''
+    A class that makes it easier to work with the output of clustat.
+    '''
 
     def __init__(self, xml, groupnames = None):
         """ A class that makes it easier to work with the output of clustat
@@ -93,7 +98,8 @@ If the script encounters any errors it returns an exit code above 0."""
             help = "Specify path to executable (defaults to /usr/bin/clustat)",
             default = "/usr/bin/clustat", metavar = "EXECUTABLE")
     parser.add_option("-p", "--parameter", dest = "parameter",
-            help = "What parameters to be passed to executable (defaults to -x)",
+            help = "What parameters to be passed to executable" \
+            "(defaults to -x)",
             action = "append", metavar = "PARAMETER")
     (options, arguments) = parser.parse_args()
 
