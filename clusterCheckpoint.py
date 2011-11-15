@@ -81,7 +81,7 @@ If the script encounters any errors it returns an exit code above 0."""
     (options, arguments) = parser.parse_args()
 
     if not options.parameter:
-            options.parameter = ['-x']
+        options.parameter = ['-x']
 
     if options.filename:
         stdout = open(options.filename).read()
