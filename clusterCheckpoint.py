@@ -94,7 +94,7 @@ If the script encounters any errors it returns an exit code above 0."""
 
         if stderr:
             print >> sys.stderr, "Clustat returned the following error:\n%s" % stderr
-            sys.exit(readFrom.exitcode)
+            sys.exit(readFrom.returncode)
 
     clustat = ClustatParser(stdout, arguments)
     (exitcode, out) = clustat.checkStatus('started')
